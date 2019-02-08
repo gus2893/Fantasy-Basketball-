@@ -1,19 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { shotMade,shotMissed, gotRebound, gotAssist, gotSteal, gotBlock, gotTurnover } from '../actions';
+import {Button } from 'semantic-ui-react';
+
 const AddStats = (props) => {
     return (
         <div>
-            <button onClick={() => props.shotMade(2)}>Two Pointer</button>
-            <button onClick={() => props.shotMade(3)}>Three Pointer</button>
-            <button onClick={() => props.shotMissed(2)}>Two Pointer Miss</button>
-            <button onClick={() => props.shotMissed(3)}>Three Pointer Miss</button>
-            <button onClick={props.gotAssist}>Assist</button>
-            <button onClick={() => props.gotRebound('OFF')}>Offensive Rebound</button>
-            <button onClick={() => props.gotRebound('DEF')}>Defensive Rebound</button>
-            <button onClick={props.gotSteal}>Steal</button>
-            <button onClick={props.gotBlock}>Block</button>
-            <button onClick={props.gotTurnover}>Turnover</button>
+            <Button onClick={() => props.shotMade(2)}>Two Pointer</Button>
+            <Button onClick={() => props.shotMade(3)}>Three Pointer</Button>
+            <Button onClick={() => props.shotMissed(2)}>Two Pointer Miss</Button>
+            <Button onClick={() => props.shotMissed(3)}>Three Pointer Miss</Button>
+            <Button onClick={props.gotAssist}>Assist</Button>
+            <Button onClick={() => props.gotRebound('OFF')}>Offensive Rebound</Button>
+            <Button onClick={() => props.gotRebound('DEF')}>Defensive Rebound</Button>
+            <Button onClick={props.gotSteal}>Steal</Button>
+            <Button onClick={props.gotBlock}>Block</Button>
+            <Button onClick={props.gotTurnover}>Turnover</Button>
         </div>
     );
 }
