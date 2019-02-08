@@ -11,21 +11,18 @@ const pointsScored = (points= 0, action) =>{
 const twoAttempts = (attempts = [0,0], action) =>{
     if(action.type === 'SHOT_MISSED')
     {
-        attempts[1] = attempts[1]+1; 
-        return attempts;
+       
+        return [attempts[0],attempts[1]+1];
     }
     if(action.type === 'SHOT_MADE')
     {
-        attempts =  attempts.map(function(i){
-            return i+1;
-        })
-        return attempts;
+        return [attempts[0]+1,attempts[1]+1];
     }
     return attempts;
 }
 const threeAttempts = (attempts = [0,0], action) =>{
     
-    if(action.type === 'SHOT_MISSED' && action.payload.kindOfShot === 3)
+    if(action.type === 'SHOT_MISSED' && action.payload.points === 3)
     {
         
         attempts[1] = attempts[1]+1; 
@@ -40,8 +37,6 @@ const threeAttempts = (attempts = [0,0], action) =>{
     }
     return attempts;
 }
-    
-
 
 const reboundsGrabbed = (rebounds= 0, action,OFF=0,DEF=0) =>{
     if(action.type === 'GOT_REBOUND'){
@@ -49,12 +44,14 @@ const reboundsGrabbed = (rebounds= 0, action,OFF=0,DEF=0) =>{
     }
     return rebounds;  
 }
+
 const offensiveRebounds = (OFF=0,action)=>{
     if(action.type === 'GOT_REBOUND' && action.payload.typeOfRebound === 'OFF'){
         return OFF+1;
     }
     return OFF;
 }
+
 const defensiveRebounds = (DEF=0,action)=>{
     if(action.type === 'GOT_REBOUND' && action.payload.typeOfRebound === 'DEF'){
         return DEF+1;

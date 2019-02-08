@@ -7,13 +7,13 @@ export const shotMade = (points) =>{
     };
 }
 
-export const shotMissed = kindOfShot => {
+export const shotMissed = (points) => {
     return {
         type: 'SHOT_MISSED',
         payload: {
-            kindOfShot
+            points
         }
-    }
+    };
 }
 
 export const gotRebound =(typeOfRebound) =>{
