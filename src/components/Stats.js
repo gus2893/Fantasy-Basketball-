@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 
 class Stats extends Component {
+
     render(){
         return (
         <div>
@@ -17,11 +18,14 @@ class Stats extends Component {
             <div>Steals: {this.props.steals}</div>
             <div>Blocks: {this.props.blocks}</div>
             <div>Turnovers: {this.props.turnovers}</div>
+            <div>Fantasy Points: {this.props.fantasyPoints}</div>
         </div>
         );
     }
 
 }
+
+
 const mapStateToProps= (state) => {
     return {
         points: state.points,
@@ -33,7 +37,8 @@ const mapStateToProps= (state) => {
         blocks: state.blocks,
         turnovers: state.turnovers,
         twoAtt: state.twoAttempts,
-        threeAtt: state.threeAttempts
+        threeAtt: state.threeAttempts,
+        fantasyPoints: state.fantasyPoints
 
    };
 }

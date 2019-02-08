@@ -87,6 +87,36 @@ const gotSteal = (steals=0, action) =>{
     return steals;
 }
 
+const fantasyPoints = (fpoints = 0, action) => {
+    switch(action.type){
+        case 'SHOT_MADE':
+            return (action.payload.points === 3) ? fpoints+3 : fpoints+2
+            
+        case 'SHOT_MISSED':
+            return fpoints -1;
+
+        case 'GOT_REBOUND':
+            return fpoints +1.2;
+            
+        case 'GOT_ASSIST':
+            return fpoints +1.5;
+            
+        case 'GOT_STEAL':
+            return fpoints+3;
+        
+        case 'GOT_BLOCK':
+            return fpoints+3;
+        
+        case 'GOT_TURNOVER':
+            return fpoints-1;
+        
+        default: return fpoints;
+
+    }
+
+}
+
+
 export default combineReducers({
     points: pointsScored,
     totalRebounds: reboundsGrabbed,
@@ -97,5 +127,7 @@ export default combineReducers({
     blocks: gotBlock,
     turnovers: gotTurnover,
     twoAttempts: twoAttempts,
-    threeAttempts: threeAttempts
+    threeAttempts: threeAttempts,
+    fantasyPoints: fantasyPoints,
+
 })
