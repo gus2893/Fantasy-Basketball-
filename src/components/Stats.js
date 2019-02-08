@@ -5,12 +5,12 @@ import { connect } from 'react-redux';
 
 class Stats extends Component {
     render(){
-        console.log(this.props);
         return (
         <div>
             <div>
                 Points: {this.props.points} 
-                <FGPercentage made={this.props.twoAtt[0]} att={this.props.twoAtt[1]}/>
+                <FGPercentage made={this.props.twoAtt[0]} att={this.props.twoAtt[1]} fg='2FG'/>
+                <FGPercentage made={this.props.threeAtt[0]} att={this.props.threeAtt[1]} fg='3FG'/>
             </div>
             <div>Assists: {this.props.assists}</div>
             <div>Rebounds: {this.props.rebounds} (OFF:{this.props.oRebounds}, DEF:{this.props.dRebounds})</div>
