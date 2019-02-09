@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Divider} from 'semantic-ui-react';
+import {Button} from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { shotMade,shotMissed, gotRebound, gotAssist, gotSteal, gotBlock, gotTurnover } from '../actions';
 

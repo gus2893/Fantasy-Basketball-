@@ -4,11 +4,12 @@ import { connect } from 'react-redux';
 
 
 class Stats extends Component {
-
+    
     render(){
+
         return (
         <div>
-            <PlayerCard/>
+            <PlayerCard stats={this.props}/>
         </div>
         );
     }

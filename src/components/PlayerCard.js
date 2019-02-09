@@ -1,6 +1,9 @@
 import React from 'react';
-import {Card, Image, Icon} from 'semantic-ui-react';
-const PlayerCard = ()=>{
+import PerformanceRating from './PerformanceRating';
+import {Card, Image} from 'semantic-ui-react';
+
+const PlayerCard = ({stats})=>{
+    
     return (
         <Card>
             <Image src='https://react.semantic-ui.com/images/avatar/large/daniel.jpg' />
@@ -10,10 +13,7 @@ const PlayerCard = ()=>{
             <Card.Description>Atlanta Hawks</Card.Description>
             </Card.Content>
             <Card.Content extra>
-            <a>
-                <Icon name='user' />
-               Performance Rating
-            </a>
+               Performance Rating : <PerformanceRating fantasyPoints = {stats.fantasyPoints}/>
             </Card.Content>
         </Card>
     );

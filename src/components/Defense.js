@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {Button, Icon} from 'semantic-ui-react';
+import {Button} from 'semantic-ui-react';
 import { gotRebound, gotSteal, gotBlock } from '../actions';
 
  const Defense = (props) => {
