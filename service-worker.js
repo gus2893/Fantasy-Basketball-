@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/fantasy/precache-manifest.2874758a707f80fea0d53fabcb92b8e2.js"
+  "/Fantasy-Basketball-/precache-manifest.f403a302b426dfafc3700c2f3f71f005.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/fantasy/index.html", {
+workbox.routing.registerNavigationRoute("/Fantasy-Basketball-/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
