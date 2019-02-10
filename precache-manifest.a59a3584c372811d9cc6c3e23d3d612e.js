@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/Fantasy-Basketball-/static/js/runtime~main.36e6d652.js"
   },
   {
-    "revision": "a6e5865df0c16a7e48101e99acaa833a",
+    "revision": "d19142d7e8ca5379ba640f74a5715a31",
     "url": "/Fantasy-Basketball-/index.html"
   }
 ];

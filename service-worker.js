@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Fantasy-Basketball-/precache-manifest.f403a302b426dfafc3700c2f3f71f005.js"
+  "/Fantasy-Basketball-/precache-manifest.a59a3584c372811d9cc6c3e23d3d612e.js"
 );
 
 workbox.clientsClaim();
